@@ -2,181 +2,249 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0b1020">
-<title>CyberCode Academy | האקדמיה שלך לתכנות</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#090e1c">
+<title>CyberCode Academy</title>
 <style>
-:root{--bg:#090e1c;--panel:#111a2e;--panel2:#17233c;--line:#263653;--text:#eef4ff;--muted:#a8b6d1;--blue:#62a8ff;--cyan:#5de0d0;--purple:#a78bfa;--gold:#ffc86b;--green:#63d9a1;--red:#ff7f91}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 10% 0%,#17264b 0,transparent 38%),var(--bg);color:var(--text);font-family:Arial, sans-serif;line-height:1.6}
-button,input,textarea{font:inherit}button{cursor:pointer}.wrap{max-width:1120px;margin:auto;padding:22px}
-header{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:12px}.logo{width:45px;height:45px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--purple));display:grid;place-items:center;font-size:23px;font-weight:bold;color:#071022}.brand h1{font-size:19px;margin:0;letter-spacing:1px}.brand small{color:var(--muted)}.streak{background:#241e25;border:1px solid #59412b;border-radius:14px;padding:9px 14px;color:#ffd28c;font-weight:bold}
-nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.navbtn,.btn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:12px;padding:10px 15px}.navbtn.active,.btn.primary{background:linear-gradient(135deg,#2769b9,#6654bb);border-color:transparent}.btn:disabled{opacity:.45;cursor:not-allowed}
-.hero{background:linear-gradient(120deg,#172b4d,#22214a 65%,#153b43);border:1px solid #344b70;border-radius:24px;padding:26px;display:grid;grid-template-columns:1.5fr 1fr;gap:18px;align-items:center;margin-bottom:20px}.eyebrow{color:var(--cyan);font-weight:bold;font-size:12px;letter-spacing:2px}.hero h2{font-size:clamp(27px,5vw,42px);line-height:1.15;margin:8px 0}.hero p{color:#c6d4ec;margin:8px 0 18px}.hero-art{font-size:90px;text-align:center;filter:drop-shadow(0 8px 25px #0008)}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}.stat,.card{background:linear-gradient(160deg,var(--panel),#0f1729);border:1px solid var(--line);border-radius:18px;padding:17px}.stat strong{display:block;font-size:26px}.stat span,.muted{color:var(--muted);font-size:13px}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:10px;margin:24px 0 12px}.section-head h2{margin:0;font-size:22px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.stage{position:relative;overflow:hidden}.stage .num{font-size:12px;color:var(--cyan);font-weight:bold}.stage h3{margin:5px 0;font-size:19px}.stage p{color:var(--muted);font-size:14px;margin:5px 0 14px}.stage .emoji{font-size:27px}.progress{height:8px;background:#26334b;border-radius:99px;overflow:hidden;margin:10px 0}.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan));width:0%}.lesson-list{display:grid;gap:12px}.lesson{display:flex;justify-content:space-between;align-items:center;gap:12px}.lesson h3{margin:0 0 3px;font-size:16px}.lesson p{margin:0;color:var(--muted);font-size:13px}.tag{font-size:11px;border:1px solid var(--line);border-radius:30px;padding:3px 9px;color:var(--muted);white-space:nowrap}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px;margin-bottom:14px}.panel h2,.panel h3{margin-top:0}.question{font-size:18px;font-weight:bold;margin:12px 0}.answers{display:grid;gap:9px;margin:14px 0}.answer{background:#17233b;border:1px solid #344866;color:var(--text);text-align:right;padding:12px 14px;border-radius:12px}.answer:hover{border-color:var(--blue)}.answer.correct{border-color:var(--green);background:#12352d}.answer.wrong{border-color:var(--red);background:#3b202b}.feedback{min-height:28px;color:var(--muted);margin:8px 0}
-textarea{width:100%;min-height:180px;background:#080e19;color:#d7e8ff;border:1px solid #334765;border-radius:12px;padding:14px;direction:ltr;text-align:left;font-family:Consolas,monospace;font-size:14px;resize:vertical}input{background:#080e19;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:10px;width:100%}
-.codebox{background:#080e19;border:1px solid #263653;border-radius:12px;padding:14px;direction:ltr;text-align:left;white-space:pre-wrap;font-family:Consolas,monospace;color:#d5e6ff;margin:12px 0}
-.output{background:#0a1720;border:1px solid #285044;color:#a9f0cf;padding:12px;border-radius:10px;min-height:44px;direction:ltr;text-align:left;white-space:pre-wrap}
-.tip{border-right:3px solid var(--cyan);padding:9px 13px;background:#102630;border-radius:8px;color:#c8e8ec;margin:12px 0}
-.hidden{display:none!important}.footer{text-align:center;color:#71819e;font-size:12px;padding:28px 0}
-@media(max-width:700px){.wrap{padding:14px}.hero{grid-template-columns:1fr}.hero-art{display:none}.stats{grid-template-columns:repeat(3,1fr);gap:7px}.stat{padding:12px}.stat strong{font-size:21px}.grid{grid-template-columns:1fr}.lesson{align-items:flex-start}.streak{font-size:13px;padding:8px}}
+:root{--bg:#090e1c;--panel:#111a2e;--panel2:#17233c;--line:#2a3b5b;--txt:#eff5ff;--muted:#aab8d2;--blue:#65aaff;--cyan:#5de0d0;--green:#67dda4;--red:#ff8295;--gold:#ffd080;--purple:#b49aff}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;touch-action:pan-y}
+html{touch-action:pan-y; -webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(ellipse at 15% 0%,#1a2a50 0,transparent 38%),var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.6;overscroll-behavior-y:contain}
+button,input,textarea{font:inherit}button{cursor:pointer;touch-action:manipulation}
+.wrap{max-width:980px;margin:auto;padding:16px;padding-bottom:40px}
+header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:5px 0 20px}
+.brand{display:flex;align-items:center;gap:10px}.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--purple));display:grid;place-items:center;color:#081021;font-weight:900;font-size:20px}.brand b{display:block;letter-spacing:1px}.brand small{color:var(--muted);font-size:12px}
+.streak{border:1px solid #654b2d;background:#2b2118;color:var(--gold);padding:8px 11px;border-radius:13px;font-size:13px;font-weight:700;white-space:nowrap}
+nav{display:flex;gap:7px;overflow-x:auto;padding-bottom:8px;margin-bottom:16px;scrollbar-width:none}nav::-webkit-scrollbar{display:none}
+.navbtn,.btn{border:1px solid var(--line);background:var(--panel);color:var(--txt);border-radius:12px;padding:10px 14px;white-space:nowrap}
+.navbtn.active,.btn.primary{background:linear-gradient(135deg,#2769b9,#6552bb);border-color:transparent}
+.btn.good{background:#174b3b;border-color:#347c61}.btn:disabled{opacity:.45;cursor:not-allowed}
+.hero{padding:23px;border:1px solid #344b70;border-radius:22px;background:linear-gradient(120deg,#172b4d,#25204d 65%,#153d43);margin-bottom:16px}
+.eyebrow{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:2px}.hero h1{font-size:clamp(27px,6vw,42px);line-height:1.15;margin:8px 0}.hero p{color:#c7d5ed;margin:8px 0 18px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:14px 0}.stat,.card,.panel{background:linear-gradient(160deg,var(--panel),#0f1729);border:1px solid var(--line);border-radius:17px;padding:15px}.stat strong{font-size:23px;display:block}.stat span,.muted{color:var(--muted);font-size:12px}
+.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:22px 0 10px}.sectionhead h2{font-size:20px;margin:0}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.stage .num{color:var(--cyan);font-size:12px;font-weight:800}.stage h3{margin:4px 0}.stage p{color:var(--muted);font-size:13px;margin:5px 0}.progress{height:7px;background:#273650;border-radius:20px;overflow:hidden;margin:10px 0}.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan));width:0}
+.panel{margin-bottom:13px}.panel h2,.panel h3{margin-top:0}.tag{border:1px solid var(--line);border-radius:30px;padding:3px 9px;color:var(--muted);font-size:11px}
+.page.hidden{display:none!important}.lessonrow{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #24334d}.lessonrow:last-child{border:0}
+.qtitle{font-size:18px;font-weight:800;margin:10px 0}.code{direction:ltr;text-align:left;white-space:pre-wrap;background:#070d18;border:1px solid #293a58;border-radius:12px;padding:13px;font:14px/1.55 ui-monospace,Consolas,monospace;color:#d8e8ff;margin:12px 0;overflow-wrap:anywhere}
+.answers{display:grid;gap:9px;margin:14px 0}.answer{width:100%;text-align:right;background:#17243c;border:1px solid #354968;border-radius:12px;padding:12px;color:var(--txt)}.answer:active{transform:scale(.99)}.answer.correct{background:#123a30;border-color:var(--green)}.answer.wrong{background:#40212c;border-color:var(--red)}
+.feedback{padding:10px 12px;border-radius:10px;background:#101e30;color:#d4e2f7;margin:10px 0;min-height:42px}.feedback.ok{border:1px solid #347b61}.feedback.bad{border:1px solid #814251}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.meter{height:9px;background:#263550;border-radius:20px;overflow:hidden;margin:10px 0}.meter i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan))}
+textarea{width:100%;min-height:150px;background:#070d18;color:#d8e8ff;border:1px solid #354968;border-radius:12px;padding:12px;direction:ltr;text-align:left;font:14px ui-monospace,Consolas,monospace}
+input{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:#080e19;color:var(--txt)}
+.callout{border-right:3px solid var(--cyan);background:#102630;padding:10px 13px;border-radius:9px;color:#d2edf0;margin:12px 0}
+.bigchoice{display:grid;grid-template-columns:1fr 1fr;gap:10px}.bigchoice button{padding:16px;border-radius:13px;font-size:17px;font-weight:800}
+.footer{text-align:center;color:#71819e;font-size:12px;padding:24px 0}
+@media(max-width:600px){.wrap{padding:12px}.grid{grid-template-columns:1fr}.stats{gap:6px}.stat{padding:10px}.stat strong{font-size:20px}.hero{padding:19px}.streak{font-size:12px;padding:7px 9px}.brand b{font-size:14px}}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header>
-  <div class="brand"><div class="logo">&lt;/&gt;</div><div><h1>CYBERCODE ACADEMY</h1><small>לומדים לחשוב. מתרגלים. יוצרים.</small></div></div>
-  <div class="streak">🔥 <span id="streak">0</span> ימי רצף</div>
+ <div class="brand"><div class="logo">&lt;/&gt;</div><div><b>CYBERCODE ACADEMY</b><small>לומדים · מתרגלים · יוצרים</small></div></div>
+ <div class="streak">🔥 <span id="streak">0</span> ימי רצף</div>
 </header>
 <nav>
-  <button class="navbtn active" data-page="home">ראשי</button>
-  <button class="navbtn" data-page="learn">מסלול לימוד</button>
-  <button class="navbtn" data-page="practice">תרגול</button>
-  <button class="navbtn" data-page="lab">מעבדת סייבר</button>
-  <button class="navbtn" data-page="tips">שיטות וטיפים</button>
+ <button class="navbtn active" data-page="home">ראשי</button>
+ <button class="navbtn" data-page="daily">2 שאלות היום</button>
+ <button class="navbtn" data-page="practice">תרגול והבנה</button>
+ <button class="navbtn" data-page="exam">מבחנים</button>
+ <button class="navbtn" data-page="tips">טיפים</button>
 </nav>
 
-<main>
 <section id="home" class="page">
-  <div class="hero">
-    <div><div class="eyebrow">YOUR PERSONAL LEARNING PATH</div><h2>הופכים סקרנות<br>ליכולת אמיתית.</h2><p>לומדים תכנות צעד אחר צעד, פותרים בעיות, בונים קוד ומפתחים חשיבה טכנולוגית.</p><button class="btn primary" onclick="showPage('learn')">מתחילים ללמוד ←</button></div>
-    <div class="hero-art">🧠💻</div>
-  </div>
-  <div class="stats">
-    <div class="stat"><strong id="xp">0</strong><span>⭐ נקודות XP</span></div>
-    <div class="stat"><strong id="done">0</strong><span>✔ שיעורים שהושלמו</span></div>
-    <div class="stat"><strong id="level">1</strong><span>🏅 דרגה</span></div>
-  </div>
-  <div class="section-head"><h2>מסלול ההתקדמות שלך</h2><span class="muted">4 שלבים</span></div>
-  <div class="grid" id="stageCards"></div>
-  <div class="section-head"><h2>המשימה היומית</h2><span class="tag">משתנה בכל יום</span></div>
-  <div class="panel"><h3 id="dailyTitle">משימת היום</h3><p id="dailyText" class="muted"></p><button class="btn primary" onclick="showPage('practice')">לפתיחת המשימה</button></div>
+ <div class="hero"><div class="eyebrow">YOUR PERSONAL LEARNING PATH</div><h1>בונים ידע. צוברים ביטחון.</h1><p>יותר מ־500 וריאציות של שאלות, תרגול בקצב שלך, שתי שאלות יומיות ומבחן מעבר בכל שלב.</p><button class="btn primary" onclick="showPage('practice')">המשך ללמוד ←</button></div>
+ <div class="stats">
+  <div class="stat"><strong id="xp">0</strong><span>⭐ נקודות XP</span></div>
+  <div class="stat"><strong id="done">0</strong><span>✔ שאלות שנפתרו</span></div>
+  <div class="stat"><strong id="level">1</strong><span>🏅 דרגה</span></div>
+ </div>
+ <div class="panel"><div class="sectionhead"><h2>ההתקדמות שלך</h2><span class="tag" id="stageName">שלב 1</span></div><div class="meter"><i id="overallBar" style="width:0%"></i></div><p class="muted" id="overallText">השלם תרגול ועבור מבחן עם 90% ומעלה כדי לפתוח את השלב הבא.</p></div>
+ <div class="sectionhead"><h2>ארבעת שלבי הלימוד</h2><span class="muted">מבחן מעבר: 90%+</span></div><div id="stages" class="grid"></div>
 </section>
 
-<section id="learn" class="page hidden">
-  <div class="section-head"><h2>📚 מסלול הלימוד</h2><span class="muted">מתקדמים בקצב שלך</span></div>
-  <div id="lessons" class="lesson-list"></div>
+<section id="daily" class="page hidden">
+ <div class="sectionhead"><h2>📅 שתי שאלות יומיות</h2><span class="tag">מקסימום 2 ביום</span></div>
+ <div class="panel"><p id="dailyStatus">השאלות היומיות שלך מחכות לך.</p><div class="meter"><i id="dailyBar" style="width:0%"></i></div><div id="dailyArea"></div></div>
 </section>
 
 <section id="practice" class="page hidden">
-  <div class="section-head"><h2>🧩 חדר התרגול</h2><span class="muted">בחר תשובה וראה הסבר</span></div>
-  <div class="panel">
-    <div class="tag" id="qStage">שלב 1 · זיהוי בעיות</div>
-    <div class="question" id="qText"></div>
-    <div class="codebox" id="qCode"></div>
-    <div class="answers" id="answers"></div>
-    <div class="feedback" id="feedback" aria-live="polite"></div>
-    <button class="btn primary" id="nextQ" onclick="nextQuestion()" disabled>לשאלה הבאה ←</button>
+ <div class="sectionhead"><h2>🧠 תרגול והבנה</h2><span class="tag" id="poolCount">500+ שאלות</span></div>
+ <div class="panel" id="understandPanel">
+  <h3>לפני שמתחילים</h3>
+  <p>קרא את ההסבר הקצר. האם הוא מובן לך?</p>
+  <div class="callout" id="lessonExplain"></div>
+  <div class="bigchoice"><button class="btn good" onclick="understood(true)">כן, מובן לי</button><button class="btn" onclick="understood(false)">לא, הסבר שוב</button></div>
+  <div id="repeatExplain" class="feedback hidden"></div>
+ </div>
+ <div class="panel hidden" id="questionPanel">
+  <div class="sectionhead"><span class="tag" id="practiceStage">שלב 1</span><span class="muted" id="practiceCounter"></span></div>
+  <div class="qtitle" id="practiceQ"></div><div class="code" id="practiceCode"></div><div class="answers" id="practiceAnswers"></div>
+  <div class="feedback hidden" id="practiceFeedback"></div>
+  <div id="understandAfter" class="hidden">
+   <p><b>האם זה מובן עכשיו?</b></p><div class="bigchoice"><button class="btn good" onclick="afterUnderstand(true)">כן</button><button class="btn" onclick="afterUnderstand(false)">לא</button></div>
   </div>
-  <div class="panel"><h3>✍️ נסה לכתוב קוד משלך</h3><p class="muted">כתוב רעיון או קוד Python. העורך כאן נועד לתכנון ולתרגול; הוא לא מריץ קוד אמיתי.</p><textarea id="myCode" spellcheck="false">temperature = 30
-
-if temperature > 35:
-    print("Hot")
-elif temperature > 25:
-    print("Warm")
-else:
-    print("Cold")</textarea><div class="tip">טיפ: לפני כתיבת קוד, כתוב במילים מה התוכנית אמורה לעשות.</div><button class="btn" onclick="saveDraft()">שמור טיוטה במכשיר</button><span id="draftMsg" class="muted"></span></div>
+  <div class="actions"><button class="btn" onclick="showPage('exam')">אני חושב שאני מוכן למבחן</button><button class="btn" onclick="newPractice()">שאלה אחרת</button></div>
+ </div>
 </section>
 
-<section id="lab" class="page hidden">
-  <div class="section-head"><h2>🛡️ מעבדת סייבר לימודית</h2><span class="tag">סביבה בטוחה בלבד</span></div>
-  <div class="panel"><h3>1. איך מידע עובר ברשת?</h3><p>כשפותחים אתר, המכשיר שולח בקשה לשרת. השרת מחזיר מידע, והדפדפן מציג אותו.</p><div class="codebox">המכשיר שלך  →  בקשה  →  שרת האתר<br>המכשיר שלך  ←  תשובה  ←  שרת האתר</div><p class="muted">מושגים שכדאי להכיר: כתובת IP, נתב (Router), DNS, שרת, HTTPS.</p></div>
-  <div class="panel"><h3>2. הצפנה ופענוח – צופן הזזה פשוט</h3><p class="muted">הדגמה לימודית בלבד: כל אות באנגלית זזה מספר צעדים באלפבית. זו אינה הצפנה שמתאימה להגנה על מידע אמיתי.</p><label for="plain">טקסט באנגלית</label><input id="plain" value="HELLO"><div style="height:10px"></div><label for="shift">מספר צעדים</label><input id="shift" type="number" min="0" max="25" value="3"><div style="height:12px"></div><button class="btn primary" onclick="cipher()">הצפן / פענח</button><div class="output" id="cipherOut" style="margin-top:12px">התוצאה תופיע כאן</div></div>
-  <div class="panel"><h3>3. זיהוי בעיות אבטחה – תרחיש</h3><p>קיבלת הודעה לא צפויה שמבקשת סיסמה דרך קישור. מה כדאי לעשות?</p><div class="answers" id="safetyAnswers"></div><div class="feedback" id="safetyFeedback"></div></div>
+<section id="exam" class="page hidden">
+ <div class="sectionhead"><h2>🎓 מבחן מעבר</h2><span class="tag">20 שאלות · צריך 90%</span></div>
+ <div class="panel" id="examIntro"><h3 id="examStageTitle">מבחן שלב 1</h3><p>המבחן בודק את הידע שלך בשלב הנוכחי. צריך לענות נכון על לפחות 18 מתוך 20 שאלות (90%) כדי לפתוח את השלב הבא.</p><p class="muted">אפשר לגשת למבחן אחרי שלמדת. אם לא עוברים, ממשיכים לתרגל ומנסים שוב.</p><button class="btn primary" onclick="startExam()">התחל מבחן</button></div>
+ <div class="panel hidden" id="examPanel"><div class="sectionhead"><b id="examProgress">שאלה 1 מתוך 20</b><span class="tag" id="examStageTag"></span></div><div class="qtitle" id="examQ"></div><div class="code" id="examCode"></div><div class="answers" id="examAnswers"></div><div class="feedback hidden" id="examFeedback"></div><button class="btn primary" id="examNext" disabled onclick="nextExam()">המשך</button></div>
+ <div class="panel hidden" id="examResult"></div>
 </section>
 
 <section id="tips" class="page hidden">
-  <div class="section-head"><h2>💡 שיטות שיעזרו לך ללמוד</h2></div>
-  <div class="panel"><h3>שיטת 4 הצעדים</h3><ol><li><b>קרא:</b> הבן מה מבקשים ממך.</li><li><b>עקוב:</b> בדוק כל שורה בקוד לפי הסדר.</li><li><b>נסה:</b> כתוב פתרון משלך לפני שמסתכלים על תשובה.</li><li><b>בדוק:</b> הרץ בראש כמה דוגמאות ותקן טעויות.</li></ol></div>
-  <div class="panel"><h3>איך מתמידים?</h3><ul><li>נסה ללמוד 10–20 דקות ביום.</li><li>אם שאלה קשה, חלק אותה לחלקים קטנים.</li><li>שמור טיוטות וכתוב מה למדת.</li><li>טעות היא רמז למה כדאי ללמוד, לא כישלון.</li></ul></div>
-  <div class="panel"><h3>קיצורי דרך חשובים ב-Python</h3><div class="codebox">==  שווה<br>!=  לא שווה<br>>   גדול מ־<br><   קטן מ־<br>>=  גדול או שווה<br><=  קטן או שווה<br>and שני התנאים חייבים להיות נכונים<br>or  מספיק שתנאי אחד יהיה נכון</div></div>
+ <div class="panel"><h2>💡 שיטת ארבעת הצעדים</h2><ol><li><b>קרא:</b> מה מבקשים ממך?</li><li><b>עקוב:</b> בדוק כל שורה לפי הסדר.</li><li><b>נסה:</b> כתוב פתרון משלך.</li><li><b>בדוק:</b> בדוק דוגמאות ותקן טעויות.</li></ol></div>
+ <div class="panel"><h2>קיצורי דרך ב־Python</h2><div class="code">==  שווה<br>!=  לא שווה<br>&gt; גדול מ־<br>&lt; קטן מ־<br>&gt;= גדול או שווה<br>&lt;= קטן או שווה<br>and שני התנאים צריכים להיות נכונים<br>or מספיק שתנאי אחד נכון</div></div>
+ <div class="panel"><h2>🛡️ חשיבה של סייבר</h2><p>לומדים על IP, DNS, נתבים, שרתים, HTTPS, הצפנה וזיהוי הודעות חשודות. מתרגלים רק בסביבה לימודית ובמערכות שמותר לך להשתמש בהן.</p></div>
+ <div class="panel"><h2>⌨️ כתיבת קוד משלך</h2><textarea id="scratch" spellcheck="false" placeholder="כתוב כאן קוד או רעיון משלך..."></textarea><div class="actions"><button class="btn" onclick="saveScratch()">שמור טיוטה</button><span class="muted" id="scratchMsg"></span></div><p class="muted">זהו אזור כתיבה ושמירה, לא מריץ Python.</p></div>
 </section>
-</main>
-<div class="footer">CYBERCODE ACADEMY · ממשיכים ללמוד בכל יום 🚀<br>ההתקדמות נשמרת בדפדפן ובמכשיר הזה בלבד.</div>
+<div class="footer">CYBERCODE ACADEMY · ההתקדמות נשמרת במכשיר הזה בלבד</div>
 </div>
 
 <script>
-const stages=[
- {name:"זיהוי ופתרון בעיות",icon:"🔍",desc:"קוראים קוד, מבינים מה הוא עושה, מאתרים טעויות ומתקנים אותן.",items:["הבנת פקודות print ומשתנים","תנאים: if / elif / else","השוואות: ==, !=, >, <","מעקב אחרי קוד שלב אחר שלב"]},
- {name:"יצירת קוד משלך",icon:"⌨️",desc:"מתכננים וכותבים תוכניות קטנות משלך.",items:["קלט ופלט","לולאות for ו-while","רשימות ומחרוזות","פונקציות ופרויקטים קטנים"]},
- {name:"חשיבה של סייבר",icon:"🛡️",desc:"מבינים רשתות, הצפנה וזיהוי סיכונים בסביבה לימודית בטוחה.",items:["איך רשתות ושרתים עובדים","כתובות IP ו-DNS","הצפנה ופענוח בסיסיים","זיהוי הודעות וקישורים חשודים"]},
- {name:"אתגרים מתקדמים",icon:"🚀",desc:"מתמודדים עם בעיות מורכבות ובונים פרויקטים אישיים.",items:["אתגרי תכנות משולבים","תכנון פתרון לפני קוד","בדיקות ותיקון באגים","פרויקט אישי להצגה"]}
+const stageInfo=[
+ {name:"זיהוי ופתרון בעיות",icon:"🔍",desc:"הבנת קוד, תנאים, משתנים, השוואות ותיקון טעויות.",explain:"בשלב הזה לומדים לקרוא קוד שורה אחר שורה. בודקים תנאים כמו if, elif ו־else, מבינים משתנים וסימני השוואה, ומגלים מה התוכנית תדפיס."},
+ {name:"יצירת קוד משלך",icon:"⌨️",desc:"קלט ופלט, לולאות, רשימות, פונקציות ופרויקטים.",explain:"בשלב הזה לומדים לכתוב תוכניות בעצמנו: לקבל קלט, להציג פלט, לחזור על פעולות עם לולאות, לשמור כמה ערכים ברשימות ולארגן קוד בפונקציות."},
+ {name:"חשיבה של סייבר",icon:"🛡️",desc:"רשתות, הצפנה, פרטיות וזיהוי סיכונים באופן בטוח.",explain:"בשלב הזה מכירים מושגי רשת כמו IP ו־DNS, מבינים למה משתמשים בהצפנה, ולומדים לזהות הודעות חשודות ולשמור על חשבונות. כל התרגול נעשה בסביבה לימודית בטוחה."},
+ {name:"אתגרים מתקדמים",icon:"🚀",desc:"חשיבה אלגוריתמית, איתור באגים ופרויקטים אישיים.",explain:"בשלב הזה מתרגלים פירוק בעיות לחלקים, תכנון אלגוריתם, בדיקת מקרי קצה, איתור באגים ובניית פרויקט אישי."}
 ];
-const questions=[
- {stage:0,q:"מה יודפס בקוד הבא?",code:'x = 4\\nif x > 5:\\n    print("A")\\nelse:\\n    print("B")',opts:["A","B","4","לא יודפס כלום"],a:1,why:"4 אינו גדול מ־5, לכן התנאי נכשל והחלק של else מופעל."},
- {stage:0,q:"איזה סימן בודק אם שני ערכים שווים?",code:"",opts:["=","==","!=","<"],a:1,why:"== הוא סימן השוואה. = משמש להצבת ערך במשתנה."},
- {stage:0,q:"מה יודפס?",code:'score = 90\\nif score >= 90:\\n    print("Great")\\nelse:\\n    print("Try again")',opts:["Try again","90","Great","שגיאה"],a:2,why:"90 גדול או שווה ל־90, ולכן יודפס Great."},
- {stage:1,q:"איזו פקודה מתאימה לחזרה על פעולה מספר פעמים?",code:"",opts:["if","print","for","=="],a:2,why:"לולאת for מאפשרת לחזור על פעולה עבור רצף ערכים."},
- {stage:1,q:"מה תפקיד של פונקציה?",code:"",opts:["לתת שם לקבוצת פקודות שאפשר להפעיל","לכבות את המחשב","לשנות את צבע המסך","למחוק משתנים"],a:0,why:"פונקציה מרכזת קוד למשימה מסוימת ואפשר לקרוא לה כשצריך."},
- {stage:2,q:"מה התפקיד של DNS?",code:"",opts:["להצפין כל קובץ","לתרגם שמות מתחם לכתובות IP","להאיץ את המקלדת","לשמור סיסמאות"],a:1,why:"DNS עוזר למצוא את כתובת ה-IP המתאימה לשם מתחם."},
- {stage:2,q:"מהי פעולה בטוחה כשמקבלים קישור חשוד שמבקש סיסמה?",code:"",opts:["להזין סיסמה כדי לבדוק","להעביר לחברים","לא ללחוץ, לבדוק מול האתר הרשמי ולדווח למבוגר אחראי","לשלוח את הסיסמה לשולח"],a:2,why:"לא מוסרים סיסמה דרך קישור לא צפוי. נכנסים לאתר הרשמי בדרך מוכרת ומתייעצים עם מבוגר אחראי."},
- {stage:3,q:"מה כדאי לעשות כשמוצאים באג בתוכנית?",code:"",opts:["למחוק הכול","לשנות הרבה דברים בבת אחת","לשחזר את הבעיה, לבדוק שורה-שורה ולנסות תיקון קטן","להתעלם ממנו"],a:2,why:"שינוי קטן ובדיקה מסודרת עוזרים להבין מה גרם לבעיה."}
-];
-const daily=["עקוב אחרי תנאי if אחד והסבר במילים למה הוא נכון או לא נכון.","כתוב תוכנית שמדפיסה שלושה משפטים שונים.","למד מושג רשת אחד והסבר אותו במילים שלך.","מצא באג קטן בקוד וכתוב איך תיקנת אותו."];
-let state=JSON.parse(localStorage.getItem("cybercode_state")||"{}");
-state.xp=state.xp||0;state.done=state.done||[];state.streak=state.streak||0;state.last=state.last||"";
-const today=new Date().toLocaleDateString("en-CA");
-if(state.last!==today){
- const yesterday=new Date(Date.now()-86400000).toLocaleDateString("en-CA");
- state.streak=state.last===yesterday?state.streak+1:1;
- state.last=today;save();
-}
-function save(){localStorage.setItem("cybercode_state",JSON.stringify(state));renderStats();}
+let db={xp:0,solved:[],unlocked:0,passed:[],streak:0,lastDay:"",dailyDay:"",dailyDone:0,dailyIds:[],scratch:""};
+try{db={...db,...JSON.parse(localStorage.getItem("cc_academy_v2")||"{}")}}catch(e){}
+const today=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+if(db.lastDay!==today()){let y=new Date();y.setDate(y.getDate()-1);let yd=y.getFullYear()+"-"+String(y.getMonth()+1).padStart(2,"0")+"-"+String(y.getDate()).padStart(2,"0");db.streak=db.lastDay===yd?db.streak+1:1;db.lastDay=today()}
+if(db.dailyDay!==today()){db.dailyDay=today();db.dailyDone=0;db.dailyIds=[]}
+function persist(){localStorage.setItem("cc_academy_v2",JSON.stringify(db));renderStats()}
+function currentStage(){return Math.min(db.unlocked,3)}
 function renderStats(){
- document.getElementById("streak").textContent=state.streak;
- document.getElementById("xp").textContent=state.xp;
- document.getElementById("done").textContent=state.done.length;
- document.getElementById("level").textContent=1+Math.floor(state.xp/100);
+ document.getElementById("xp").textContent=db.xp;document.getElementById("done").textContent=db.solved.length;
+ document.getElementById("level").textContent=1+Math.floor(db.xp/100);document.getElementById("streak").textContent=db.streak;
+ document.getElementById("stageName").textContent="שלב "+(currentStage()+1);
+ document.getElementById("overallText").textContent=db.unlocked===3&&db.passed.includes(3)?"כל השלבים הושלמו! כל הכבוד.":"עבור מבחן עם 90% ומעלה כדי לפתוח את השלב הבא.";
+ document.getElementById("overallBar").style.width=(db.passed.length/4*100)+"%";
+ document.getElementById("examStageTitle").textContent="מבחן שלב "+(currentStage()+1)+" – "+stageInfo[currentStage()].name;
 }
 function showPage(id){
  document.querySelectorAll(".page").forEach(p=>p.classList.toggle("hidden",p.id!==id));
  document.querySelectorAll(".navbtn").forEach(b=>b.classList.toggle("active",b.dataset.page===id));
- if(id==="practice")loadQuestion();
- window.scrollTo({top:0,behavior:"smooth"});
+ if(id==="daily")renderDaily();if(id==="practice")initPractice();if(id==="exam")renderStats();
+ window.scrollTo(0,0);
 }
 document.querySelectorAll(".navbtn").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.page)));
 function renderStages(){
- document.getElementById("stageCards").innerHTML=stages.map((s,i)=>{
- const count=questions.filter(q=>q.stage===i&&state.done.includes("q"+questions.indexOf(q))).length;
- const total=questions.filter(q=>q.stage===i).length;
- return `<div class="card stage"><div class="emoji">${s.icon}</div><div class="num">שלב ${i+1}</div><h3>${s.name}</h3><p>${s.desc}</p><div class="progress"><i style="width:${total?count/total*100:0}%"></i></div><span class="muted">${count}/${total} אתגרי תרגול הושלמו</span></div>`;
- }).join("");
- document.getElementById("lessons").innerHTML=stages.map((s,i)=>`<div class="panel"><div class="num">שלב ${i+1} ${s.icon}</div><h2>${s.name}</h2><p class="muted">${s.desc}</p><div class="lesson-list">${s.items.map((it,j)=>`<div class="lesson"><div><h3>${it}</h3><p>${i===0?"יסודות ותרגול":i===1?"לומדים דרך בנייה":i===2?"ידע והגנה בסביבה בטוחה":"חשיבה ויצירה"}</p></div><span class="tag">${j+1} / ${s.items.length}</span></div>`).join("")}</div></div>`).join("");
+ document.getElementById("stages").innerHTML=stageInfo.map((s,i)=>`<div class="card stage"><div class="num">שלב ${i+1} ${s.icon}</div><h3>${s.name}</h3><p>${s.desc}</p><div class="progress"><i style="width:${db.passed.includes(i)?100:0}%"></i></div><span class="muted">${db.passed.includes(i)?"✔ מבחן מעבר הושלם":i<=db.unlocked?"פתוח ללמידה":"🔒 נפתח אחרי ציון 90% בשלב הקודם"}</span></div>`).join("");
 }
-let qi=0,answered=false;
-function loadQuestion(){
- qi=(qi+questions.length)%questions.length;answered=false;
- const q=questions[qi];document.getElementById("qStage").textContent="שלב "+(q.stage+1)+" · "+stages[q.stage].name;
- document.getElementById("qText").textContent=q.q;document.getElementById("qCode").textContent=q.code.replaceAll("\\n","\n");
- document.getElementById("feedback").textContent="";document.getElementById("nextQ").disabled=true;
- document.getElementById("answers").innerHTML=q.opts.map((o,i)=>`<button class="answer" onclick="choose(${i})">${i+1}. ${o}</button>`).join("");
+function rand(n){return Math.floor(Math.random()*n)}
+function makeQ(stage,seed){
+ let a,b,c,opts,ans,code,q,why;
+ if(stage===0){
+  a=2+((seed*7)%19);b=2+((seed*11)%20);let op=seed%5;
+  if(op===0){q="מה יודפס בקוד?";code=`x = ${a}\\nif x > ${b}:\\n    print("A")\\nelse:\\n    print("B")`;ans=a>b?0:1;opts=["A","B","C","לא יודפס כלום"];why=`בודקים אם ${a} גדול מ־${b}. ${a>b?"התנאי נכון ולכן יודפס A.":"התנאי לא נכון ולכן יודפס B."}`}
+  else if(op===1){q="איזה תנאי נכון עבור הערכים הנתונים?";code=`x = ${a}\\ny = ${b}`;let vals=[a===b,a!==b,a>b,a<b];ans=vals.findIndex(v=>v);opts=["x == y","x != y","x > y","x < y"];why="משווים בין הערכים של x ו־y ובוחרים את התנאי הראשון שמתקיים."}
+  else if(op===2){q="מה יודפס?";code=`score = ${a}\\nif score >= ${b}:\\n    print("עבר")\\nelse:\\n    print("נסה שוב")`;ans=a>=b?0:1;opts=["עבר","נסה שוב","score","שגיאה"];why=`${a} ${a>=b?">=":"<"} ${b}, ולכן ${a>=b?"התנאי מתקיים":"התנאי לא מתקיים"}.`}
+  else if(op===3){q="איזה ערך יודפס?";code=`n = ${a}\\nif n % 2 == 0:\\n    print("זוגי")\\nelse:\\n    print("אי זוגי")`;ans=a%2===0?0:1;opts=["זוגי","אי זוגי","n","0"];why=`כשמחלקים ${a} ב־2 ${a%2===0?"אין שארית ולכן המספר זוגי":"נשארת שארית ולכן המספר אי־זוגי"}.`}
+  else{q="מה יודפס בסוף?";code=`x = ${a}\\ny = ${b}\\nif x > 10 and y > 10:\\n    print("A")\\nelif x > 10 or y > 10:\\n    print("B")\\nelse:\\n    print("C")`;ans=(a>10&&b>10)?0:((a>10||b>10)?1:2);opts=["A","B","C","D"];why="and דורש ששני התנאים יהיו נכונים; or דורש שלפחות אחד יהיה נכון."}
+ }else if(stage===1){
+  let n=1+(seed%8);
+  if(seed%4===0){q="כמה פעמים הלולאה תדפיס את המילה Hi?";code=`for i in range(${n}):\\n    print("Hi")`;ans=n;opts=[String(n),String(n+1),String(Math.max(0,n-1)),"בלי סוף"];why=`range(${n}) מייצר ${n} ערכים, מ־0 עד ${n-1}, ולכן הלולאה רצה ${n} פעמים.`}
+  else if(seed%4===1){q="מה יודפס?";code=`total = 0\\nfor i in range(1, ${n+2}):\\n    total += 1\\nprint(total)`;ans=n+1;opts=[String(n),String(n+1),String(n+2),"0"];why="הלולאה מתחילה ב־1 ועוצרת לפני הגבול העליון, ולכן נספרות "+(n+1)+" חזרות."}
+  else if(seed%4===2){q="מה התפקיד של def בקוד Python?";code=`def greet():\\n    print("שלום")`;ans=0;opts=["להגדיר פונקציה","ליצור תנאי","להתחיל לולאה","להציג תמונה"];why="def מגדיר פונקציה שאפשר להפעיל באמצעות קריאה לשמה."}
+  else{q="איזה מבנה נתונים מתאים לשמירת כמה ערכים ברצף?";code=`colors = ["red", "blue", "green"]`;ans=1;opts=["int","list","if","print"];why="רשימה (list) שומרת כמה פריטים בסדר מסוים."}
+ }else if(stage===2){
+  let terms=[["DNS","לתרגם שם מתחם לכתובת IP"],["IP","כתובת שמזהה התקן ברשת"],["HTTPS","תקשורת מוצפנת בין דפדפן לאתר"],["Router","להעביר תעבורה בין רשתות"],["Phishing","ניסיון להטעות ולגנוב מידע"]];
+  let t=terms[seed%terms.length];q="מה התפקיד של "+t[0]+"?";code="מושג רשת: "+t[0];ans=0;opts=[t[1],"לנקות את המסך","להגדיל את הזיכרון","לכבות את האינטרנט"];why=t[0]+" משמש כדי "+t[1]+".";
+ }else{
+  let n=2+(seed%9);let vals=[n,n+1,n*2];
+  if(seed%3===0){q="איזו גישה עוזרת למצוא באג בצורה מסודרת?";code="1. לשחזר את התקלה\\n2. לבדוק שלב-שלב\\n3. לשנות דבר אחד\\n4. לבדוק שוב";ans=0;opts=["לשחזר, לבדוק שלב-שלב ולשנות דבר אחד בכל פעם","למחוק את כל הקוד","לשנות הרבה שורות יחד","להתעלם מהתקלה"];why="בדיקה מסודרת ושינוי קטן עוזרים לזהות מה גרם לבאג."}
+  else if(seed%3===1){q="מה כדאי לעשות לפני כתיבת פתרון לבעיה מורכבת?";code="בעיה גדולה → חלקים קטנים → תכנון → קוד";ans=1;opts=["לנחש קוד","לחלק את הבעיה לחלקים ולתכנן","לכתוב בלי לבדוק","להעתיק פתרון אקראי"];why="פירוק ותכנון הופכים בעיה גדולה לצעדים קטנים שאפשר לבדוק."}
+  else{q="מהו מקרה קצה (edge case)?";code=`לדוגמה: תוכנית שמקבלת מספרים, כולל ${n}, 0 ומספר שלילי`;ans=2;opts=["הצבע של הקוד","שם של פונקציה","קלט מיוחד או גבולי שחשוב לבדוק","שגיאת כתיב בלבד"];why="מקרה קצה הוא מצב חריג או גבולי שעלול לחשוף בעיה בתוכנית."}
+ }
+ return {stage,q,code:code.replaceAll("\\n","\n"),opts,a:ans,why,id:stage+"-"+seed};
 }
-function choose(n){
- if(answered)return;answered=true;const q=questions[qi];const buttons=[...document.querySelectorAll("#answers button")];
- buttons.forEach((b,i)=>{if(i===q.a)b.classList.add("correct");else if(i===n)b.classList.add("wrong");b.disabled=true;});
- const ok=n===q.a;document.getElementById("feedback").textContent=(ok?"✅ נכון! ":"❌ לא הפעם. ")+q.why;
- if(ok&&!state.done.includes("q"+qi)){state.done.push("q"+qi);state.xp+=15;save();renderStages();}
- document.getElementById("nextQ").disabled=false;document.getElementById("nextQ").textContent=qi===questions.length-1?"חזרה לשאלה הראשונה ←":"לשאלה הבאה ←";
+const BANK_SIZE=560;
+function questionById(stage,seed){return makeQ(stage,seed)}
+function getPool(stage){return Array.from({length:140},(_,i)=>questionById(stage,i))}
+document.getElementById("poolCount").textContent="560+ וריאציות";
+let practiceQ=null,practiceAnswered=false,practiceIndex=0;
+function initPractice(){
+ document.getElementById("understandPanel").classList.remove("hidden");document.getElementById("questionPanel").classList.add("hidden");
+ document.getElementById("lessonExplain").textContent=stageInfo[currentStage()].explain;
 }
-function nextQuestion(){qi=(qi+1)%questions.length;loadQuestion();}
-function saveDraft(){localStorage.setItem("cybercode_draft",document.getElementById("myCode").value);document.getElementById("draftMsg").textContent=" ✓ הטיוטה נשמרה במכשיר";}
-function cipher(){
- const text=document.getElementById("plain").value.toUpperCase(),n=Math.max(0,Math.min(25,Number(document.getElementById("shift").value)||0));
- const out=[...text].map(ch=>{if(ch>="A"&&ch<="Z")return String.fromCharCode((ch.charCodeAt(0)-65+n)%26+65);return ch;}).join("");
- document.getElementById("cipherOut").textContent=out;
+function understood(yes){
+ const repeat=document.getElementById("repeatExplain");
+ if(!yes){repeat.classList.remove("hidden");repeat.textContent="בוא נפרק את זה: "+stageInfo[currentStage()].desc+" קרא שוב את ההסבר ונסה לזהות דוגמה אחת.";return}
+ repeat.classList.add("hidden");document.getElementById("understandPanel").classList.add("hidden");document.getElementById("questionPanel").classList.remove("hidden");newPractice();
 }
-function setupSafety(){
- const opts=["ללחוץ ולכתוב את הסיסמה","לא ללחוץ; להיכנס לאתר הרשמי בדרך מוכרת ולבקש עזרה ממבוגר אחראי","לשלוח את ההודעה לכל החברים"];
- document.getElementById("safetyAnswers").innerHTML=opts.map((x,i)=>`<button class="answer" onclick="safetyPick(${i})">${i+1}. ${x}</button>`).join("");
+function newPractice(){
+ let stage=currentStage();let pool=getPool(stage);let pick=pool[rand(pool.length)];
+ practiceQ=pick;practiceAnswered=false;
+ document.getElementById("practiceStage").textContent="שלב "+(stage+1)+" · "+stageInfo[stage].name;
+ document.getElementById("practiceCounter").textContent="מאגר תרגול · "+(practiceIndex+1);
+ document.getElementById("practiceQ").textContent=pick.q;document.getElementById("practiceCode").textContent=pick.code;
+ document.getElementById("practiceFeedback").classList.add("hidden");document.getElementById("understandAfter").classList.add("hidden");
+ document.getElementById("practiceAnswers").innerHTML=pick.opts.map((o,i)=>`<button class="answer" onclick="answerPractice(${i})">${i+1}. ${o}</button>`).join("");
 }
-function safetyPick(i){
- document.getElementById("safetyFeedback").textContent=i===1?"✅ נכון. לא מוסרים סיסמאות דרך קישורים לא צפויים.":"לא כדאי. הודעה שמבקשת סיסמה דרך קישור עלולה להיות ניסיון דיוג. בחר באפשרות הבטוחה.";
+function answerPractice(n){
+ if(practiceAnswered)return;practiceAnswered=true;let ok=n===practiceQ.a;
+ [...document.querySelectorAll("#practiceAnswers button")].forEach((b,i)=>{if(i===practiceQ.a)b.classList.add("correct");if(i===n&&!ok)b.classList.add("wrong");b.disabled=true});
+ const f=document.getElementById("practiceFeedback");f.classList.remove("hidden");f.className="feedback "+(ok?"ok":"bad");f.textContent=(ok?"נכון! ":"לא בדיוק. ")+practiceQ.why;
+ if(ok){if(!db.solved.includes(practiceQ.id)){db.solved.push(practiceQ.id);db.xp+=5;persist()}}
+ document.getElementById("understandAfter").classList.remove("hidden");
 }
-document.getElementById("dailyTitle").textContent="המשימה היומית שלך";
-document.getElementById("dailyText").textContent=daily[new Date().getDay()%daily.length];
-const draft=localStorage.getItem("cybercode_draft");if(draft)document.getElementById("myCode").value=draft;
-renderStats();renderStages();loadQuestion();setupSafety();
+function afterUnderstand(yes){
+ if(yes){practiceIndex++;newPractice()}
+ else{let f=document.getElementById("practiceFeedback");f.textContent+=" נסה לקרוא שוב את ההסבר: "+stageInfo[currentStage()].explain;practiceIndex++;setTimeout(newPractice,900)}
+}
+function dailyQuestionId(day,index){let num=Number(day.replaceAll("-",""))||1;return (num*13+index*37)%140}
+function renderDaily(){
+ let count=db.dailyDone;document.getElementById("dailyStatus").textContent=`ענית על ${count} מתוך 2 שאלות היום. מחר ייפתחו שתי שאלות חדשות.`;
+ document.getElementById("dailyBar").style.width=(count/2*100)+"%";
+ let area=document.getElementById("dailyArea");
+ if(count>=2){area.innerHTML='<div class="feedback ok">כל הכבוד! השלמת את שתי השאלות היומיות. אפשר להמשיך לתרגל ללא הגבלה באזור התרגול.</div>';return}
+ let q=questionById(currentStage(),dailyQuestionId(today(),count));area.innerHTML=`<div class="tag">שאלה ${count+1} מתוך 2</div><div class="qtitle">${q.q}</div><div class="code">${q.code}</div><div class="answers">${q.opts.map((o,i)=>`<button class="answer" onclick="dailyAnswer(${i})">${i+1}. ${o}</button>`).join("")}</div><div id="dailyFeedback" class="feedback hidden"></div>`;
+ window.dailyCurrent=q;
+}
+function dailyAnswer(n){
+ let q=window.dailyCurrent,ok=n===q.a;let f=document.getElementById("dailyFeedback");f.classList.remove("hidden");f.className="feedback "+(ok?"ok":"bad");f.textContent=(ok?"נכון! ":"לא הפעם. ")+q.why;
+ if(ok&&!db.solved.includes(q.id)){db.solved.push(q.id);db.xp+=5}
+ db.dailyDone++;persist();setTimeout(renderDaily,ok?1200:2200);
+}
+let examQuestions=[],examIndex=0,examScore=0,examAnswered=false;
+function startExam(){
+ let s=currentStage(),pool=getPool(s);examQuestions=[];
+ while(examQuestions.length<20){let q=pool[rand(pool.length)];if(!examQuestions.some(x=>x.id===q.id))examQuestions.push(q)}
+ examIndex=0;examScore=0;document.getElementById("examIntro").classList.add("hidden");document.getElementById("examResult").classList.add("hidden");document.getElementById("examPanel").classList.remove("hidden");loadExamQ();
+}
+function loadExamQ(){
+ let q=examQuestions[examIndex];examAnswered=false;document.getElementById("examProgress").textContent=`שאלה ${examIndex+1} מתוך 20`;document.getElementById("examStageTag").textContent="שלב "+(currentStage()+1);
+ document.getElementById("examQ").textContent=q.q;document.getElementById("examCode").textContent=q.code;
+ document.getElementById("examFeedback").classList.add("hidden");document.getElementById("examNext").disabled=true;document.getElementById("examNext").textContent=examIndex===19?"הצג תוצאה":"השאלה הבאה";
+ document.getElementById("examAnswers").innerHTML=q.opts.map((o,i)=>`<button class="answer" onclick="answerExam(${i})">${i+1}. ${o}</button>`).join("");
+}
+function answerExam(n){
+ if(examAnswered)return;examAnswered=true;let q=examQuestions[examIndex],ok=n===q.a;if(ok)examScore++;
+ [...document.querySelectorAll("#examAnswers button")].forEach((b,i)=>{if(i===q.a)b.classList.add("correct");if(i===n&&!ok)b.classList.add("wrong");b.disabled=true});
+ let f=document.getElementById("examFeedback");f.classList.remove("hidden");f.textContent=ok?"נכון!":"לא נכון. "+q.why;document.getElementById("examNext").disabled=false;
+}
+function nextExam(){if(examIndex<19){examIndex++;loadExamQ()}else finishExam()}
+function finishExam(){
+ let score=Math.round(examScore/20*100),s=currentStage(),pass=score>=90;
+ document.getElementById("examPanel").classList.add("hidden");let r=document.getElementById("examResult");r.classList.remove("hidden");
+ if(pass){if(!db.passed.includes(s))db.passed.push(s);db.unlocked=Math.min(3,Math.max(db.unlocked,s+1));db.xp+=100;persist();renderStages()}
+ r.innerHTML=`<h2>${pass?"🏆 כל הכבוד! עברת שלב!":"💪 ממשיכים להתאמן!"}</h2><div style="font-size:38px;font-weight:900">${score}%</div><p>ענית נכון על ${examScore} מתוך 20 שאלות.</p><div class="feedback ${pass?"ok":"bad"}">${pass?"קיבלת 90% ומעלה. "+(s===3?"סיימת את כל ארבעת השלבים!":"השלב הבא נפתח לך."):"צריך לפחות 90% כדי לפתוח את השלב הבא. חזור לתרגול ונסה שוב."}</div><div class="actions"><button class="btn primary" onclick="showPage('practice')">חזרה לתרגול</button>${pass&&s<3?'<button class="btn good" onclick="showPage(\'home\');initPractice()">לשלב הבא</button>':''}</div>`;
+}
+function saveScratch(){db.scratch=document.getElementById("scratch").value;persist();document.getElementById("scratchMsg").textContent="נשמר במכשיר ✓"}
+document.getElementById("scratch").value=db.scratch||"";
+renderStats();renderStages();renderDaily();
+</script>
+<script>
+/* מניעת זום מקרי בהקשה כפולה/מחוות; גלילה רגילה נשארת פעילה. */
+document.addEventListener("dblclick",e=>e.preventDefault(),{passive:false});
+document.addEventListener("gesturestart",e=>e.preventDefault(),{passive:false});
+document.addEventListener("gesturechange",e=>e.preventDefault(),{passive:false});
+document.addEventListener("gestureend",e=>e.preventDefault(),{passive:false});
 </script>
 </body>
 </html>
